@@ -18,6 +18,8 @@ namespace API.Controllers
             return new string[] { "value1", "value2" };
         }
 
+        //asdasdasda
+
         // GET: api/Category/5
         [HttpGet("{id}", Name = "GetCategory")]
         public string Get(int id)
