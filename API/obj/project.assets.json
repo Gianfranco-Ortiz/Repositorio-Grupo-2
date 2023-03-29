@@ -460,24 +460,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\alons\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Source\\Repos\\Gianfranco-Ortiz\\Repositorio-Grupo-2\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\alons\\Source\\Repos\\Gianfranco-Ortiz\\Repositorio-Grupo-2\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Usuario\\Source\\Repos\\Gianfranco-Ortiz\\Repositorio-Grupo-2\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Source\\Repos\\Gianfranco-Ortiz\\Repositorio-Grupo-2\\API\\obj\\",
+      "projectPath": "C:\\Users\\alons\\Source\\Repos\\Gianfranco-Ortiz\\Repositorio-Grupo-2\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\alons\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alons\\Source\\Repos\\Gianfranco-Ortiz\\Repositorio-Grupo-2\\API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\alons\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
