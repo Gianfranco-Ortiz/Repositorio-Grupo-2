@@ -12,42 +12,81 @@ namespace API.Controllers
     [ApiController]
     public class TutorialController : ControllerBase
     {
+        Tutorial[] tutorials = new Tutorial[] 
+        { 
+            new Tutorial { Id = 1, Name = "Tutorial 1", Description = "Description 1", Quantity = 10 },
+            new Tutorial { Id = 2, Name = "Tutorial 2", Description = "Description 2", Quantity = 20 },
+            new Tutorial { Id = 3, Name = "Tutorial 3", Description = "Description 3", Quantity = 30 }
+        };
+        
+        
         // GET: api/Tutorial
         [HttpGet(Name = "GetTutorials")]
         public IEnumerable<Tutorial> Get()
         {
-            return new List<Tutorial>
-            {
-                new Tutorial { Id = 1, Name = "Tutorial 1", Description = "Description 1", Quantity = 10 },
-                new Tutorial { Id = 2, Name = "Tutorial 2", Description = "Description 2", Quantity = 20 }
-            };
+            
+            var tutorialsList = tutorials;
+            
+            return tutorialsList;
         }
 
-        // GET: api/Tutorial/TutorialId/5
+        // GET: api/Tutorial/5
         [HttpGet("{id}", Name = "GetTutorial")]
-        public string Get(int id)
+        public ActionResult<Tutorial> Get(int id)
         {
+            var tutorial = Array.Find(tutorials, t => t.Id == id);
             
+            if (tutorial == null)
+            {
+                return NotFound();
+            }
             
-            return "value";
+            return tutorial;
         }
 
         // POST: api/Tutorial
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult Post([FromBody] Tutorial newTutorial)
         {
+            // code to create a new tutorial
+            
+            if (newTutorial.Id==4) return Created("", newTutorial);
+            
+            return BadRequest();
         }
 
         // PUT: api/Tutorial/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public ActionResult<Tutorial> Put(int id, [FromBody] Tutorial newTutorial)
         {
+            var tutorial = Array.Find(tutorials, t => t.Id == id);
+            
+            if (tutorial == null)
+            {
+                return NotFound();
+            }
+
+            tutorial = newTutorial;
+            
+            return tutorial;
         }
 
         // DELETE: api/Tutorial/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(int id)
         {
+            var tutorial = Array.Find(tutorials, t => t.Id == id);
+            
+            if (tutorial == null)
+            {
+                return NotFound();
+            }
+
+            return new ContentResult{
+                ContentType = "text/plain",
+                StatusCode = 200,
+                Content = "Tutorial Deleted Successfully"
+            };
         }
     }
 }
