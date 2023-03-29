@@ -20,6 +20,10 @@ namespace API.Controllers
 
         //asdasdasda
 
+        //asdasdas
+
+        ///asdasdasdas
+
         // GET: api/Category/5
         [HttpGet("{id}", Name = "GetCategory")]
         public string Get(int id)
