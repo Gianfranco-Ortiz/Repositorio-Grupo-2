@@ -18,22 +18,31 @@ namespace API.Controllers
             new Category { Id = 3, Title = "Categoria 3", Year = 2023, Description = "Description 3"}};
         // GET: api/Category
         [HttpGet(Name = "GetCategories")]
-        public IEnumerable<string> Get()
+        public IEnumerable<Category> Get()
         {
-            return new string[] { "value1", "value2" };
+            var categoriesList = categories;
+
+            return categoriesList;
         }
 
         // GET: api/Category/5
         [HttpGet("{id}", Name = "GetCategory")]
-        public string Get(int id)
+        public ActionResult<Category> Get(int id)
         {
-            return "value";
+            var category = Array.Find(categories, x => x.Id == id);
+
+            if (category == null) { return NotFound; }
+
+            return category;
         }
 
         // POST: api/Category
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult Post([FromBody] Category newCategory)
         {
+            if (newCategory.Id == 4) return Created("", newCategory);
+
+            return BadRequest;
         }
 
         // PUT: api/Category/5
