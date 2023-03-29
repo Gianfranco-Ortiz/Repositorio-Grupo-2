@@ -1,2 +1,2 @@
 # Repositorio-Grupo-2
-Repositorio de trbabjos del grupo 2 de Aplicaciones Web
+Repositorio de trabajos del grupo 2 de Aplicaciones Web
